@@ -160,4 +160,22 @@ class Parancsok{
         }
     }
 
+
+    function isAdmin($email,$adminpass)
+    {
+        if (!empty($this->keresEmail($email))) {
+
+            if ($adminpass=="1234567890") {
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        }
+        else {
+            echo"Ezzel az email címmel nincs profil létrehozva!";
+        }
+    }
+
 }

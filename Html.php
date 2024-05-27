@@ -76,4 +76,12 @@ class Html{
         echo"<form method='POST'><div class='rgs-menu'>Kattintson az emailben küldött linkre a regisztráció véglegesítéséért!<br>";
         echo'<button class="button" type="submit" name="btn-resend">Email újra küldése</button></div></form>';
     }
+
+    static function AdminMenu()
+    {
+        echo '<style type="text/css">.lgn-menu  { display: none; }</style>';
+        echo '<style type="text/css">.lgn-button  { display: none; }</style>';
+        echo"<form method='POST'><div class='rgs-menu'>Felhasználók kezelése<br></div></form>";
+
+    }
 }

@@ -49,7 +49,13 @@ class UserController{
         if (isset($_POST['bjl'])) {
             $email = $_POST['mail'];
             $password = $_POST['password'];
-            $parancsok->login($email,$password);
+            if ($parancsok->isAdmin($email,$password)) {
+                Html::AdminMenu();
+            }
+            else {
+                $parancsok->login($email,$password);
+            }
+            
         }
 
     }
